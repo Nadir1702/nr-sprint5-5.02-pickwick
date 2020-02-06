@@ -19,47 +19,150 @@ body {
 
 /* Utility */
 
-#nav {
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 50px;
+}
+
+section {
+  margin-top: 10vh;
+}
+
+.button {
+  background: var(--green-color);
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1rem 1.25rem;
+  border-radius: 50px;
+}
+
+.section-title {
+  font-family: "Merienda", cursive;
+  font-weight: normal;
+  color: var(--green-color);
+  font-size: 2.5rem;
+}
+
+/* Navigation */
+
+.nav {
   border-bottom: 4px solid var(--light-color);
 }
 
-#nav .container {
-  max-width: var(--max-width);
-  margin: auto;
+.nav .container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  justify-content: space-between;
 }
 
-#nav .container a {
+/* Nav links */
+.nav .container .nav-link {
   color: var(--dark-color);
   font-weight: 500;
   text-decoration: none;
   padding: 0 0.5rem;
 }
 
-#nav .container a img {
-  height: 65px;
-  background: url("../img/pickwick-logo.png") no-repeat center center/cover;
+/* Logo */
+.nav .container a img {
+  max-height: 65px;
+  padding: 0.25rem 0;
 }
 
-#nav .container a:last-child {
-  background: var(--green-color);
-  color: #fff;
-  font-weight: bold;
-  padding: 1rem 1.5rem;
-  border-radius: 50px;
-}
-
-#showcase {
+/* Showcase */
+.showcase {
+  grid: flex;
   height: 80vh;
-  background: url("../img/goedemorgen.jpg") no-repeat center center/cover;
+  background: url("../img/showcase-goedemorgen.jpg") no-repeat center
+    center/cover;
+  /* Ellips masker: grootte(XY) at middelpunt(XY) */
+  clip-path: ellipse(130% 100% at 50% 0%);
 }
 
-#showcase .mask {
-  background: url("../img/masks/header-mask.svg") no-repeat center bottom/cover;
-  width: 100%;
-  height: 250px;
-  justif-self: end;
+.showcase .container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  height: 100%;
 }
+
+.showcase img {
+  max-width: 600px;
+}
+
+.showcase .showcase-text {
+  max-width: 500px;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+  line-height: 2rem;
+  text-shadow: #000 0 0 5px;
+  padding-bottom: 20vh;
+}
+
+.new .container {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: 1.5fr 1fr 1fr; */
+  justify-content: start;
+  align-items: center;
+}
+
+.new .container a {
+  justify-self: start;
+}
+
+.new .container img {
+  grid-column: 2;
+  grid-row: 1/4;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Section */
+/* Flavors */
+.flavors {
+  background: #eceade;
+  /* Ellips masker: grootte(XY) at middelpunt(XY) */
+  /* clip-path: ellipse(100% 50% at bottom); */
+  /* clip-path: polygon(
+    0% 0%,
+    25% 10%,
+    50% 12.5%,
+    75% 10%,
+    100% 0%,
+    100% 100%,
+    75% 90%,
+    50% 87.5%,
+    25% 90%,
+    0% 100%
+  ); */
+}
+
+.flavors .cards {
+  display: flex;
+  height: 50vh;
+  background: #eceade;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flavors .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  max-width: 25%;
+  /* max-height: 25%; */
+}
+
+.flavors .card img {
+  max-width: 75%;
+  max-height: 75%;
+}
+
+/* img/flavors/camoherbal.png */
