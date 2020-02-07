@@ -2,7 +2,7 @@
   --green-color: #4b9618;
   --light-color: #d4d4d4;
   --dark-color: #000;
-  --max-width: 1140px;
+  --max-width: 1170px;
 }
 
 /* Reset */
@@ -25,8 +25,8 @@ body {
   padding: 0 50px;
 }
 
-section {
-  margin-top: 10vh;
+.section {
+  margin: 5vh 0;
 }
 
 .button {
@@ -36,6 +36,7 @@ section {
   text-decoration: none;
   padding: 1rem 1.25rem;
   border-radius: 50px;
+  justify-self: start;
 }
 
 .section-title {
@@ -45,9 +46,17 @@ section {
   font-size: 2.5rem;
 }
 
+.align-center {
+  text-align: center;
+}
+
 /* Navigation */
 
 .nav {
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1;
   border-bottom: 4px solid var(--light-color);
 }
 
@@ -62,11 +71,11 @@ section {
   color: var(--dark-color);
   font-weight: 500;
   text-decoration: none;
-  padding: 0 0.5rem;
+  padding: 0 1.25rem;
 }
 
 /* Logo */
-.nav .container a img {
+.nav .container .pickwick-logo {
   max-height: 65px;
   padding: 0.25rem 0;
 }
@@ -89,7 +98,7 @@ section {
   height: 100%;
 }
 
-.showcase img {
+.showcase .showcase-title {
   max-width: 600px;
 }
 
@@ -107,62 +116,212 @@ section {
 .new .container {
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: 1fr 1fr;
-  /* grid-template-rows: 1.5fr 1fr 1fr; */
+  grid-template-columns: repeat(2, 1fr);
   justify-content: start;
   align-items: center;
 }
 
-.new .container a {
-  justify-self: start;
-}
-
-.new .container img {
+.new .container .new-img {
   grid-column: 2;
-  grid-row: 1/4;
+  grid-row: 1 / 4;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Section */
-/* Flavors */
+/* Section: Flavors */
+
 .flavors {
   background: #eceade;
-  /* Ellips masker: grootte(XY) at middelpunt(XY) */
-  /* clip-path: ellipse(100% 50% at bottom); */
-  /* clip-path: polygon(
-    0% 0%,
-    25% 10%,
-    50% 12.5%,
-    75% 10%,
-    100% 0%,
-    100% 100%,
-    75% 90%,
-    50% 87.5%,
-    25% 90%,
-    0% 100%
-  ); */
+  /* Cut sides of masks */
+  overflow: hidden;
 }
 
-.flavors .cards {
-  display: flex;
-  height: 50vh;
-  background: #eceade;
-  flex-wrap: wrap;
-  justify-content: center;
+/* Masks */
+.mask {
+  background: #fff;
+  margin: -10% 0;
+  height: 20vh;
+  width: 120vw;
+  margin-left: -10vw;
+}
+.mask-top {
+  border-radius: 0 0 50% 50%;
+}
+.mask-bottom {
+  border-radius: 50% 50% 0 0;
 }
 
-.flavors .card {
+.flavors .container {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto repeat(2, 1fr);
+  align-items: center;
+}
+
+.flavors .container .section-title {
+  grid-column: 1 / -1;
+}
+
+.flavors .container .card {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  max-width: 25%;
-  /* max-height: 25%; */
+  /* Chrome stupid
+  justify-content: end; */
+  text-align: center;
 }
 
-.flavors .card img {
-  max-width: 75%;
-  max-height: 75%;
+.flavors .container .card .flavor-img {
+  object-fit: contain;
+  max-width: 300px;
+  max-height: 300px;
 }
 
-/* img/flavors/camoherbal.png */
+.flavors .container .card .flavor-name {
+  font-family: "Merienda", cursive;
+  font-weight: normal;
+  font-size: 1.3rem;
+  padding: 1rem 0;
+}
+
+/* Section: Tea Topics */
+
+.topics .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-gap: 1.25rem 3rem;
+}
+
+.topics .container .topics-video-img {
+  grid-row: 1/-1;
+  object-fit: contain;
+  max-width: 100%;
+  align-self: center;
+  box-shadow: 0 0.5rem 1rem 0.25rem rgba(0, 0, 0, 0.4);
+}
+
+/* Section: Inspire */
+
+.inspire .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+
+.inspire .container .inspire-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align: center;
+}
+
+.inspire .container .inspire-img {
+  max-width: 90%;
+}
+
+/* Section: Newsletter */
+
+.newsletter {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 80vw;
+  background: url("../img/showcase-goedemiddag.jpg") no-repeat center
+    center/cover;
+}
+
+.newsletter {
+  overflow: hidden;
+}
+
+.newsletter .container {
+  padding-right: 0;
+}
+
+.newsletter .newsletter-text {
+  padding: 2rem 0;
+}
+
+.newsletter .newsletter-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+  width: 100%;
+}
+
+.newsletter .newsletter-form .span {
+  grid-column: span 2;
+  width: 100%;
+}
+
+.newsletter .newsletter-form .background {
+  border: none;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.newsletter .newsletter-form .background:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.newsletter .newsletter-form .background:focus {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.newsletter .newsletter-form .button {
+  cursor: pointer;
+  border: none;
+}
+
+/* Utility 2 */
+
+/* Footer */
+
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* grid-template-rows: repeat(3, auto); */
+  grid-gap: 4rem;
+  line-height: 2rem;
+}
+
+.footer .container .list-title {
+  font-family: "Merienda", cursive;
+  font-weight: normal;
+  font-size: 1.1rem;
+  padding: 2rem 0;
+}
+
+.footer .container ul > li {
+  list-style: none;
+}
+
+.footer .container .social {
+  grid-column: 1/-1;
+  text-align: end;
+}
+
+.footer .container .social .social-link {
+  display: inline-block;
+  padding: 0.25rem;
+  list-style: none;
+}
+
+.footer .footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 1 / -1;
+}
+.footer .footer-bottom > * {
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footer .pw-logo {
+  grid-row: 2;
+  grid-column-end: -1;
+}

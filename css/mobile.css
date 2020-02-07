@@ -1,0 +1,44 @@
+.button {
+  font-size: 0.75rem;
+  margin-bottom: 3rem;
+}
+.container > * {
+  margin: 1.5rem 0;
+}
+.section {
+  /* margin-top: 5rem; */
+}
+
+/* Navigation bar */
+.nav .container a {
+  display: none;
+}
+.nav .container a:nth-child(4) {
+  display: initial;
+  margin: 0 auto;
+}
+
+/* Section: New */
+.new .container .section-title {
+  font-size: 1.5rem;
+}
+.new .container {
+  display: inline-block;
+}
+.new .container .new-img {
+  grid-row: -1;
+  max-width: 100%;
+}
+
+.flavors .container {
+  grid-template-columns: 1fr;
+}
+
+.topics .container {
+  display: initial;
+  padding: 0;
+}
+
+.topics .container {
+  margin-bottom: 1rem;
+}

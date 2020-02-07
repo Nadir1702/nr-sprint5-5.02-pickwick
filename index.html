@@ -8,13 +8,18 @@
       name="description"
       content="aarom staat erop elk Pickwick theelabel een vraag. Zo willen we iedereen aanmoedigen om meer tijd voor elkaar te nemen. Bekijk bijvoorbeeld het bijzondere ..."
     />
-
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
     <link
       href="https://fonts.googleapis.com/css?family=Merienda|Quicksand&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
-
+    
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="./css/mobile.css"
+    />
     <title>Pickwick. Neem de tijd</title>
   </head>
 
@@ -25,7 +30,7 @@
         <a class="nav-link" href="#">Tea Topics</a>
         <a class="nav-link" href="#">Inspiratie</a>
         <a class="nav-link" href="index.html"
-          ><img src="img/pickwick-logo.png" alt="Pickwick"
+          ><img class="pickwick-logo" src="./img/pickwick-logo.png" alt="Pickwick"
         /></a>
         <a class="nav-link" href="#">Over Pickwick</a>
         <a class="nav-link" href="#">Contact</a>
@@ -35,7 +40,11 @@
 
     <header class="showcase">
       <div class="container">
-        <img src="img/pw-text-goedemorgen.svg" alt="Goedemorgen" />
+        <img
+          class="showcase-title"
+          src="img/showcase-goedemorgen.svg"
+          alt="Goedemorgen"
+        />
         <p class="showcase-text">
           Wil jij alles uit de dag halen? Word heerlijk wakker met een warm
           kopje Pickwick thee. Een rustig begin maakt de rest van de dag fijner.
@@ -43,7 +52,7 @@
       </div>
     </header>
 
-    <section class="new">
+    <section class="section new">
       <div class="container">
         <h1 class="section-title">Nieuw: Sunny Orange Camomile!</h1>
         <p>
@@ -53,77 +62,104 @@
           wegdromen op ieder moment van de dag.
         </p>
         <a href="#" class="button">Ontdek de nieuwe variant</a>
-        <img class="img" src="img/joyoftea.jpg" alt="Pickwick: Joy of Tea" />
+        <img
+          class="new-img"
+          src="img/joyoftea.jpg"
+          alt="Pickwick: Joy of Tea"
+        />
       </div>
     </section>
 
-    <section class="flavors">
+    <section class="section flavors">
+      <div class="mask mask-top"></div>
+
       <div class="container">
-        <h1 class="section-title">Onze favoriete smaken</h1>
-        <div class="cards">
-          <div class="card">
-            <div class="flavor-image"></div>
-            <img src="img/flavors/camoherbal.png" alt="Camomile Honey" />
-            <h2 class="flavor-name">Camomile Honey</h2>
-            <p class="flavor-description">
-              Bloemige blend van kamille en honing. Voorheen: Pickwick
-              Ontspanning.
-            </p>
-          </div>
+        <h1 class="section-title align-center">Onze favoriete smaken</h1>
 
-          <div class="card">
-            <img
-              src="img/flavors/orangemandarin.png"
-              alt="Green Tea Orange Mandarin"
-            />
-            <h2 class="flavor-name">Green Tea Orange Mandarin</h2>
-            <p class="flavor-description">
-              Frisse groene thee met een karakteristieke lichte kleur.
-            </p>
-          </div>
+        <div class="card">
+          <img
+            class="flavor-img"
+            src="img/flavors/camoherbal.png"
+            alt="Camomile Honey"
+          />
+          <h2 class="flavor-name">Camomile Honey</h2>
+          <p class="flavor-description">
+            Bloemige blend van kamille en honing. Voorheen: Pickwick
+            Ontspanning.
+          </p>
+        </div>
 
-          <div class="card">
-            <img
-              src="img/flavors/greenteavariatie.png"
-              alt="Green Tea Variation Box"
-            />
-            <h2 class="flavor-name">Green Tea Variation Box</h2>
-            <p class="flavor-description">
-              Vier heerlijke groene thee blends samen in één verpakking.
-            </p>
-          </div>
+        <div class="card">
+          <img
+            class="flavor-img"
+            src="img/flavors/orangemandarin.png"
+            alt="Green Tea Orange Mandarin"
+          />
+          <h2 class="flavor-name">Green Tea Orange Mandarin</h2>
+          <p class="flavor-description">
+            Frisse groene thee met een karakteristieke lichte kleur.
+          </p>
+        </div>
 
-          <div class="card">
-            <img src="img/flavors/evenopfleuren.png" alt="Even... Opfleuren" />
-            <h2 class="flavor-name">Even... Opfleuren</h2>
-            <p class="flavor-description">
-              Licht zoete groene thee met rozenblaadjes en framboos.
-            </p>
-          </div>
+        <div class="card">
+          <img
+            class="flavor-img"
+            src="img/flavors/greenteavariatie.png"
+            alt="Green Tea Variation Box"
+          />
+          <h2 class="flavor-name">Green Tea Variation Box</h2>
+          <p class="flavor-description">
+            Vier heerlijke groene thee blends samen in één verpakking.
+          </p>
+        </div>
 
-          <div class="card">
-            <img src="img/flavors/smooth-chai2x.png" alt="Smooth Chai" />
-            <h2 class="flavor-name">Smooth Chai</h2>
-            <p class="flavor-description">
-              Heerlijke rooibos verrijkt met kaneel, anijs, gember en
-              kruidnagel.
-            </p>
-          </div>
+        <div class="card">
+          <img
+            class="flavor-img"
+            src="img/flavors/evenopfleuren.png"
+            alt="Even... Opfleuren"
+          />
+          <h2 class="flavor-name">Even... Opfleuren</h2>
+          <p class="flavor-description">
+            Licht zoete groene thee met rozenblaadjes en framboos.
+          </p>
+        </div>
 
-          <div class="card">
-            <img src="img/flavors/spicy-chai2x.png" alt="Spicy Chai" />
-            <h2 class="flavor-name">Spicy Chai</h2>
-            <p class="flavor-description">
-              Kruidige blend met kaneel, kardemom, anijs en kruidnagel.
-            </p>
-          </div>
+        <div class="card">
+          <img
+            class="flavor-img"
+            src="img/flavors/smooth-chai2x.png"
+            alt="Smooth Chai"
+          />
+          <h2 class="flavor-name">Smooth Chai</h2>
+          <p class="flavor-description">
+            Heerlijke rooibos verrijkt met kaneel, anijs, gember en kruidnagel.
+          </p>
+        </div>
+
+        <div class="card">
+          <img
+            class="flavor-img"
+            src="img/flavors/spicy-chai2x.png"
+            alt="Spicy Chai"
+          />
+          <h2 class="flavor-name">Spicy Chai</h2>
+          <p class="flavor-description">
+            Kruidige blend met kaneel, kardemom, anijs en kruidnagel.
+          </p>
         </div>
       </div>
+      <div class="mask mask-bottom"></div>
     </section>
 
-    <section class="topics">
+    <section class="section topics">
       <div class="container">
-        <h1 class="section-title">Tea Topics</h1>
+        <img
+          class="topics-video-img"
+          src="img/tarek-video.png"
+          alt="Video: Tarek"
+        />
+        <h1 class="section-title align-left">Tea Topics</h1>
         <p>
           Wij geloven dat een goed gesprek begint met thee. Daarom staat erop
           elk Pickwick theelabel een vraag. Zo willen we iedereen aanmoedigen om
@@ -134,9 +170,205 @@
           Nieuwsgierig naar alle persoonlijke verhalen? Of wil je weten hoe je
           zelf een theelabel kunt maken?
         </p>
-        <a href="#" class="button">Ontdek de nieuwe variant</a>
-        <img class="img" src="img/joyoftea.jpg" alt="Pickwick: Joy of Tea" />
+        <a href="#" class="button">Bekijk alle Tea Topics</a>
       </div>
     </section>
+
+    <section class="section inspire">
+      <h1 class="section-title align-center">Laat je inspireren</h1>
+
+      <div class="container">
+        <article class="inspire-article inspire-iced">
+          <img
+            class="inspire-img"
+            src="img/inspire-iced.jpg"
+            alt="Joy of Tea Green Jasmin"
+          />
+          <h2 class="inspire-title">Zin in iets verfrissends?</h2>
+          <p class="inspire-text">
+            Probeer ook eens dit recept met Joy of Tea Green Jasmin. Voeg zelf
+            citroen en muntblaadjes toe en maak in een handomdraai jouw eigen
+            Pickwick Iced tea. Verrassend lekker!
+          </p>
+          <a href="#" class="inspire-link">Ontdek het recept</a>
+        </article>
+
+        <article class="inspire-article inspire-history">
+          <img
+            class="inspire-img"
+            src="img/inspire-history.jpg"
+            alt="Pickwick theezakjes"
+          />
+          <h2 class="inspire-title">Thuis sinds 1753</h2>
+          <p class="inspire-text">
+            De rijke geschiedenis van Pickwick begint meer dan 260 jaar geleden
+            in een klein dorpje in Friesland. Onze eerste en nog steeds meest
+            populaire blend is Pickwick English.
+          </p>
+          <a href="#" class="inspire-link">Meer over Pickwick</a>
+        </article>
+
+        <article class="inspire-article inspire-productoty">
+          <img
+            class="inspire-img"
+            src="img/inspire-productoty.jpg"
+            alt="Beste product van het jaar: Pickwick Green Tea Orange Mandarin"
+          />
+          <h2 class="inspire-title">Product van het jaar!</h2>
+          <p class="inspire-text">
+            Heb jij het al gehoord? Onze Pickwick Green Tea Orange Mandarin is
+            verkozen tot beste product van het jaar 2019-2020 in de categorie
+            thee. Daar zijn wij super trots op! Deze heerlijke frisse blend van
+            groene thee, sinaasappelschilletjes en mandarijn is 100% natuurlijk.
+            Benieuwd geworden? Kijk hieronder waar je het kan kopen!
+          </p>
+          <a href="#" class="inspire-link">Koop online</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="container">
+        <h1 class="section-title align-left">Pickwick Theeblaadje</h1>
+        <p class="newsletter-text">
+          Onze nieuwsbrief loopt over van de lekkere recepten, aanbiedingen,
+          nieuwe producten en leuke evenementen van Pickwick.
+        </p>
+
+        <form class="newsletter-form" action="">
+          <div class="form-gender span">
+            <input
+              class="background"
+              type="radio"
+              id="male"
+              name="sex"
+              value="male"
+              checked
+            />
+            <label for="male">Dhr.</label>
+            <input
+              class="background"
+              type="radio"
+              id="female"
+              name="sex"
+              value="female"
+            />
+            <label for="female">Mevr.</label>
+          </div>
+
+          <div class="form-firstname">
+            <label for="firstname">Voornaam</label>
+            <input
+              class="background span"
+              type="text"
+              name="firstname"
+              id="firstname"
+            />
+          </div>
+
+          <div class="form-surname">
+            <label for="surname">Achternaam</label>
+            <input
+              class="background span"
+              type="text"
+              name="surname"
+              id="surname"
+            />
+          </div>
+
+          <div class="form-email span">
+            <label for="email">E-mailadres</label>
+            <input
+              class="background span"
+              type="email"
+              name="email"
+              id="email"
+            />
+          </div>
+
+          <div class="form-checkbox-16yo background span">
+            <input type="checkbox" name="16yo" id="16yo" />
+            <label class="form-label-background" for="checkbox"
+              >Ja, ik ben ouder dan 16 jaar</label
+            >
+          </div>
+          <div class="form-checkbox-terms background span">
+            <input type="checkbox" name="terms" id="terms" />
+            <label for="checkbox"
+              >Ja, ik ontvang graag gepersonaliseerde e-mails over Pickwick
+              producten, exclusieve aanbiedingen, promoties en service op basis
+              van mijn aankopen, product registraties en activiteiten op
+              pickwick.nl. Ik begrijp dat ik mij op ieder moment kan
+              uitschrijven. Raadpleeg onze privacy policy voor meer
+              informatie.</label
+            >
+          </div>
+        <input class="button" type="button" value="Schrijf je nu in"></input>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="social">
+          <h1 class="list-title ">Volg ons op</h1>
+            <a class="social-link" href="https://www.youtube.com/user/PickwickNederland/"><img src="img/social/youtube.png" alt="Youtube"></a>
+            <a class="social-link" href="https://www.facebook.com/PickwickNL/"><img src="img/social/facebook.png" alt="Facebook"></a>
+            <a class="social-link" href="https://www.instagram.com/pickwicknl/"><img src="img/social/instagram.png" alt="Instagram"></a>
+        </div>
+
+        <div class="assortment">
+          <h1 class="list-title">Assortiment</h1>
+          <ul>
+            <li>Zwarte thee</li>
+            <li>Groene thee</li>
+            <li>Witte thee</li>
+            <li>Spices</li>
+            <li>Fruit thee</li>
+            <li>Rooibos</li>
+            <li>Kruiden</li>
+            <li>Joy of Tea</li>
+            <li>Even..</li>
+          </ul>
+        </div>
+
+        <div class="about">
+          <h1 class="list-title">Over Pickwick</h1>
+          <ul>
+            <li>Nieuws</li>
+            <li>Tea Topics</li>
+            <li>Spaarcollectie</li>
+            <li>Theerecepten</li>
+            <li>Nieuwsbrief</li>
+            <li>Over onze thee</li>
+            <li>Ethical Tea Partnership</li>
+            <li>Geschiedenis</li>
+          </ul>
+        </div>
+
+        <div class="service">
+          <h1 class="list-title">Klantenservice</h1>
+          <ul>
+            <li>Contact</li>
+            <li>Veelgestelde vragen</li>
+            <li>Thee op het werk</li>
+            <li>Thee in de horeca</li>
+          </ul>
+        </div>
+          <br>
+
+        <div class="footer-bottom">
+            <a href="#">©2020 Pickwick</a>
+            <a href="#">Thee</a>
+            <a href="#">Privacy</a>
+            <a href="#">Cookies</a>
+            <a href="#">Bedrijfsinformatie</a>
+            <a href="#">Gebruikersvoorwaarden</a>
+            <a href="#">Jacobs Douwe Egberts</a>
+        </div>
+        <a href="#"></a>
+        <img class="pw-logo" src="img/pickwick-logo.png" alt="Pickwick">
+      </div>
+    </footer>
   </body>
 </html>
